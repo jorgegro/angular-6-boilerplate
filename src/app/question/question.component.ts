@@ -11,16 +11,11 @@ import { QuizService } from '../quiz.service';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
-
-<<<<<<< HEAD
   constructor(private quiz: QuizService) {
     this.quiz = quiz;
 
-    console.log(this.quiz.description);
+    console.log(this.quiz);
    }
-=======
-  constructor() { }
->>>>>>> 37f6b8c1345871b98717235ae8efee7b2c9b6867
 
   ngOnInit() {
   }
