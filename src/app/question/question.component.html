@@ -1,5 +1,23 @@
-<div class="row">
-  <div class="col">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div id = "1">
+        <h2 class= "text-center">Question {{quiz.questions.id}}: {{quiz.questions.name}} </h2>
 
+        <!-- <div *nfor="let choice of this.quiz.questions[0].choice.name">
+          <input type="radio" (click)="">
+          <p></p>
+        </div> -->
+      </div>
+      <div id = "2">
+        <h2 class="text-center">Question 2 </h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+        <button routerLink="/" class="btn btn-primary">Home Page</button>
+      <button routerLink="/question/2" class="btn btn-primary">Question page</button>
+    </div>
   </div>
 </div>
