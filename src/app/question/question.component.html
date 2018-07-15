@@ -1,3 +1,15 @@
-<p>
-  question works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Questions {{this.quiz.currentQuestion}}: {{this.quiz.question[this.quiz.currentQuestion - 1 ].name}} </h1>
+
+
+      <div *ngFor="let answer of this.quiz.question[this.quiz.currentQuestion - 1].choices">
+        <input type="radio">
+        <p>{{answer.answer}}</p>
+      </div>
+      <button class="btn btn-primary" (click)="this.quiz.goBackQuestion()">Back</button>
+      <button class="btn btn-primary" (click)="this.quiz.goNextQuestion()">Next</button>
+    </div>
+  </div>
+</div>
