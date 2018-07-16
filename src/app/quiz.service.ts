@@ -27,16 +27,20 @@ export class QuizService {
       this.router.navigate([`/result`]);
     }
   }
+  total = 100;
   
   calculateResult(){
-
+    for(let i = 0; i < this.question.length; i++){
+      this.total = this.total + this.question[i].selectedAnswer;
+    }
+    console.log(this.total);
   }
   currentQuestion = 1;
 
   question = [
     {
       name: "How many people are they in your group?",
-      selectedAnswer: '',
+      selectedAnswer: null,
       choices: [
         {
           answer: 'Me, Myself, and I',
@@ -58,7 +62,7 @@ export class QuizService {
     },
     {
       name: 'Choose your weapon',
-      selectedAnswer: '',
+      selectedAnswer: null,
       choices: [
         {
           answer: 'My body',
@@ -80,7 +84,7 @@ export class QuizService {
     },
     {
       name: 'Would you help others?',
-      selectedAnswer: '',
+      selectedAnswer: null,
       choices: [
         {
           answer: 'Not at all',
@@ -94,7 +98,7 @@ export class QuizService {
     },
     {
       name: 'Where would you survive the most?',
-      selectedAnswer: '',
+      selectedAnswer: null,
       choices: [
         {
           answer: 'A dumpster',
@@ -116,7 +120,7 @@ export class QuizService {
     },
     {
       name: 'How would you move around?',
-      selectedAnswer: '',
+      selectedAnswer: null,
       choices: [
         {
           answer: 'Horse',

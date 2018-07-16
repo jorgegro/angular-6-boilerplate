@@ -1,12 +1,12 @@
 <div class="container">
-  <div class="row">
+  <div class="row mt-5">
     <div class="col">
-      <h1>Questions {{this.quiz.currentQuestion}}: {{this.quiz.question[this.quiz.currentQuestion - 1 ].name}} </h1>
+      <h1>Questions {{this.quiz.currentQuestion}}: {{this.quiz.question[this.quiz.currentQuestion - 1].name}} </h1>
 
 
-      <div *ngFor="let answer of this.quiz.question[this.quiz.currentQuestion - 1].choices">
-        <input type="radio">
-        <p>{{answer.answer}}</p>
+      <div class="mt-4" *ngFor="let answer of this.quiz.question[this.quiz.currentQuestion - 1].choices">
+        <input  type="radio" [value]="answer.value" [(ngModel)]="this.quiz.question[this.quiz.currentQuestion - 1].selectedAnswer">
+        <span class="pl-5" >{{answer.answer}}</span>
       </div>
       <button class="btn btn-primary" (click)="this.quiz.goBackQuestion()">Back</button>
       <button class="btn btn-primary" (click)="this.quiz.goNextQuestion()">Next</button>
