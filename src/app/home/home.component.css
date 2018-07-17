@@ -28,9 +28,23 @@
         top: 0;
         color: #fff;
     }
-    /* .bg-cover{
-        background: 
-    } */
+    .quizTitle{
+        color: white;
+        font-family: 'Creepster', cursive;
+        font-size: 4em;
+        text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    }
+    .startFont{
+        font-size: 50px;
+    }
+    .bg-cover{
+        background-color: #77777727;
+        width: 630px;
+        position: absolute;
+        top: 160px;
+        left: 430px;
+        padding: 20px 30px;
+    }
     
     @media (min-aspect-ratio: 16/9) {
      .video-foreground { height: 300%; top: -100%; }
