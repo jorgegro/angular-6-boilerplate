@@ -10,7 +10,7 @@ export class QuizService {
   constructor(private router: Router) { }
   
   goBackQuestion(){
-    if(this.question.length < 0){
+     if(this.currentQuestion > 1){
       this.currentQuestion--;
       this.router.navigate([`/question/${this.currentQuestion}`]);
     } else {
@@ -22,7 +22,7 @@ export class QuizService {
     if(this.question.length > this.currentQuestion){
       this.currentQuestion++;
       this.router.navigate([`/question/${this.currentQuestion}`]);
-    } else {
+    } else { 
       this.calculateResult();
       this.router.navigate([`/result`]);
     }
@@ -35,7 +35,7 @@ export class QuizService {
     }
     console.log(this.total);
   }
-  currentQuestion = 1;
+  currentQuestion = 1 ;
 
   question = [
     {
