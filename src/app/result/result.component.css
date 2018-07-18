@@ -1,0 +1,70 @@
+.bg {
+  background-image: url("/assets/result_bg.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.resultNumber {
+  text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+  color: maroon;
+  font-size: 6em;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 3s;
+  -webkit-animation-iteration-count: 1;
+  font-family: 'Nosifer', cursive;
+}
+
+.resultFontTop {
+  color: whitesmoke;
+  font-size: 4em;
+  text-align: center;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  margin-left: 300px;
+  margin-right: 300px;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+}
+
+.resultFontBot {
+  color: whitesmoke;
+  font-size: 4em;
+  text-align: center;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  margin-left: 300px;
+  margin-right: 300px;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 5s;
+  -webkit-animation-iteration-count: 1;
+}
+
+.zombieLeft {
+  position: absolute;
+  left: 0px;
+  top: 357pt;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+}
+
+.zombieRight {
+  position: absolute;
+  right: 0;
+  top: 357pt;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+}
+
+.resultBox {
+  padding-top: 12pc;
+}
+
+.home{
+  position: absolute;
+  right: 82vh;
+  bottom: 50px;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-delay: 6s;
+  -webkit-animation-iteration-count: 1;
+}

@@ -1,7 +1,14 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h1>You got {{this.quiz.total}}% chances at surviving the zombie apocalypse</h1>
+<div class="container-fluid bg">
+  <div class="resultBox">
+    <div class="row">
+      <div class="col">
+        <h1 class="resultFontTop animated bounceInLeft">You are  </h1>
+        <p class="resultNumber text-center animated bounceInDown">{{this.quiz.total}}%</p>
+        <h1 class="resultFontBot animated bounceInRight">prepapred to survive!</h1>
+      </div>
     </div>
   </div>
 </div>
+<img class= "zombieLeft animated slideInLeft" width="300px" src = "http://i93.photobucket.com/albums/l58/clay_lubbers/2_animated-walking-zombie-gif-animation-cartoon-zombie-walking-dead.gif">
+<img class= "zombieRight animated slideInRight" width="300px" src = "/assets/zombie-rotate.gif">
+<button (click)="this.quiz.reset()" routerLink="/" type="button" class="btn btn-primary home animated zoomIn">Again?</button>

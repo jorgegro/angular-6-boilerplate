@@ -1,0 +1,41 @@
+.backbutton {
+    position: absolute;
+    top: 600px;
+    right: 900px;
+    background-image: url(/assets/leftZombieArm.png);
+    background-size: cover;
+    width: 300px;
+    height: 100px;
+    background-color: none;
+ }
+ 
+ .nextbutton {
+    position: absolute;
+    top: 600px;
+    left: 900px;
+    background-image: url(/assets/rightZombieArm.png);
+    background-size: cover;
+    width: 300px;
+    height: 100px;
+    border: none;
+ }
+ 
+ .fontquestion {
+    font-family: 'Gaegu', cursive;
+    color:  whitesmoke;
+    font-size: 50px;
+ }
+ 
+ .answers {
+    position: absolute;
+    left: 450px;
+    padding-top: 30px;
+    color: white;
+    font-family: 'Special Elite', cursive;
+ }
+ 
+ .background {
+    background-image: url(/assets/zombieGrayBg-f.jpeg);
+    background-size: cover;
+    height: 100vh;
+ }

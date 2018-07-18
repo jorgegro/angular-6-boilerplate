@@ -27,7 +27,7 @@ export class QuizService {
       this.router.navigate([`/result`]);
     }
   }
-  total = 100;
+  total = 0;
   
   calculateResult(){
     for(let i = 0; i < this.question.length; i++){
@@ -37,26 +37,56 @@ export class QuizService {
   }
   currentQuestion = 1 ;
 
+  reset(){
+    for(let i = 0; i < this.question.length; i++){
+      this.question[i].selectedAnswer = null;
+    }
+    this.currentQuestion = 1;
+    this.total = 0;
+  }
+
   question = [
+    {
+      name: "What type of zombie are in this apocalypse?",
+      selectedAnswer: null,
+      choices: [
+        {
+          answer: "Resident Evil Zombies",
+          value: 3
+        },
+        {
+          answer: "Walking Dead Zombies",
+          value: 12.5
+        },
+        {
+          answer: "World War Z Zombies",
+          value: 6
+        },
+        {
+          answer: "Zombieland Zombies",
+          value: 9
+        }
+      ]
+    },
     {
       name: "How many people are they in your group?",
       selectedAnswer: null,
       choices: [
         {
           answer: 'Me, Myself, and I',
-          value: -5
+          value: 9
         },
         {
           answer: 'Just my close friends and I!',
-          value: 0
+          value: 12.5
         },
         {
           answer: '10 people, we need the numbers',
-          value: -10
+          value: 6
         },
         {
           answer: 'I love my community',
-          value: -15
+          value: 3
         }
       ]
     },
@@ -66,19 +96,19 @@ export class QuizService {
       choices: [
         {
           answer: 'My body',
-          value: -15
+          value: 3
         },
         {
           answer: 'flyswatter',
-          value: -10
+          value: 6
         },
         {
           answer: 'Pistol with 2 cartidges',
-          value: -5
+          value: 9
         },
         {
           answer: 'baseball bat',
-          value: 0
+          value: 12.5
         }
       ]
     },
@@ -88,11 +118,11 @@ export class QuizService {
       choices: [
         {
           answer: 'Not at all',
-          value: 0
+          value: 12.5
         },
         {
           answer: 'yes',
-          value: -5
+          value: 6.25
         }
       ]
     },
@@ -102,19 +132,19 @@ export class QuizService {
       choices: [
         {
           answer: 'A dumpster',
-          value: -5
+          value: 9
         },
         {
           answer: 'Abandonded building',
-          value: 0
+          value: 12.5
         },
         {
           answer: 'A treehouse',
-          value: -10
+          value: 6
         },
         {
           answer: 'A playground',
-          value: -15
+          value: 3
         }
       ]
     },
@@ -124,19 +154,47 @@ export class QuizService {
       choices: [
         {
           answer: 'Horse',
-          value: 0
+          value: 12.5
         },
         {
           answer: 'Hoverboard',
-          value: -10
+          value: 6
         },
         {
           answer: 'Motocycle',
-          value: -15
+          value: 3
         },
         {
           answer: 'Kombi',
-          value: -5
+          value: 9
+        }
+      ]
+    },
+    {
+      name: 'If you get bitten would you amputate your limb?',
+      selectedAnswer: null,
+      choices: [
+        {
+          answer: 'Yes, I need to survive no matter what!',
+          value: 12.5
+        },
+        {
+          answer: "No, I don't want to suffer",
+          value: 6.25
+        }
+      ]
+    },
+    { 
+      name: 'Would you kill your dog if he turns into zombie?',
+      selectedAnswer: null,
+      choices: [
+        {
+          answer: 'Yes, you gotta survive!',
+          value: 12.5
+        },
+        {
+          answer: "I can't do that to my loving dog",
+          value: 6.25
         }
       ]
     }
