@@ -1,7 +1,7 @@
 .backbutton {
     position: absolute;
-    top: 600px;
-    right: 900px;
+    top: 450px;
+    right:1080px;
     background-image: url(/assets/leftZombieArm.png);
     background-size: cover;
     width: 300px;
@@ -11,8 +11,8 @@
  
  .nextbutton {
     position: absolute;
-    top: 600px;
-    left: 900px;
+    top: 450px;
+    left: 1080px;
     background-image: url(/assets/rightZombieArm.png);
     background-size: cover;
     width: 300px;
@@ -24,14 +24,17 @@
     font-family: 'Gaegu', cursive;
     color:  whitesmoke;
     font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 15px;
  }
  
  .answers {
     position: absolute;
-    left: 450px;
+    left: 560px;
     padding-top: 30px;
     color: white;
     font-family: 'Special Elite', cursive;
+    font-size: 1.4em;
  }
  
  .background {

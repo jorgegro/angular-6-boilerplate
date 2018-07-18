@@ -7,8 +7,12 @@
         <h1 class="resultFontBot animated bounceInRight">prepapred to survive!</h1>
       </div>
     </div>
+    <div class="row btnPadding">
+      <div class="col">
+          <a (click)="this.quiz.reset()" routerLink="/" type="button" class="btn btn-primary home animated zoomIn"></a>
+      </div>
+    </div>
   </div>
 </div>
 <img class= "zombieLeft animated slideInLeft" width="300px" src = "http://i93.photobucket.com/albums/l58/clay_lubbers/2_animated-walking-zombie-gif-animation-cartoon-zombie-walking-dead.gif">
 <img class= "zombieRight animated slideInRight" width="300px" src = "/assets/zombie-rotate.gif">
-<button (click)="this.quiz.reset()" routerLink="/" type="button" class="btn btn-primary home animated zoomIn">Again?</button>

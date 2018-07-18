@@ -4,6 +4,10 @@
   height: 100vh;
 }
 
+.btnPadding {
+  padding-top: 250px;
+}
+
 .resultNumber {
   text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
   color: maroon;
@@ -60,11 +64,65 @@
   padding-top: 12pc;
 }
 
-.home{
+.home {
   position: absolute;
   right: 82vh;
   bottom: 50px;
   -webkit-animation-duration: 5s;
   -webkit-animation-delay: 6s;
   -webkit-animation-iteration-count: 1;
+} 
+
+a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none !important;
+  color: #262626;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-family: verdana;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  opacity: 0.3;
+  filter: alpha(opacity=10);
+}
+
+a:before {
+  content: '';
+  width: 200px;
+  height: 90px;
+  position: absolute;
+  left: 0;
+  top: -15px;
+  border-left: 2px solid #262626;
+  border-right: 2px solid #262626;
+  transition: 1s;
+  color: black;
+}
+
+a:after {
+  content: 'Try Again?';
+  width: 230px;
+  height: 60px;
+  position: absolute;
+  left: -15px;
+  top: 0;
+  border-top: 2px solid #262626;
+  border-bottom: 2px solid #262626;
+  transition: 1s;
+  color: rgb(0, 0, 0);
+  background-color: none;
+}
+
+a:hover:before {
+  transform: rotateY(180deg);
+}
+
+a:hover:after {
+  transform: rotateX(180deg);
 }

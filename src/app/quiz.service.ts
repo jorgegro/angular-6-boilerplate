@@ -47,7 +47,7 @@ export class QuizService {
 
   question = [
     {
-      name: "What type of zombie are in this apocalypse?",
+      name: "What type of zombies are going to be in your apocalypse?",
       selectedAnswer: null,
       choices: [
         {
@@ -69,7 +69,7 @@ export class QuizService {
       ]
     },
     {
-      name: "How many people are they in your group?",
+      name: "How many people are there in your group?",
       selectedAnswer: null,
       choices: [
         {
@@ -91,7 +91,7 @@ export class QuizService {
       ]
     },
     {
-      name: 'Choose your weapon',
+      name: 'Choose your weapon!!!',
       selectedAnswer: null,
       choices: [
         {
@@ -127,7 +127,7 @@ export class QuizService {
       ]
     },
     {
-      name: 'Where would you survive the most?',
+      name: 'Where would you make your homebase',
       selectedAnswer: null,
       choices: [
         {
@@ -185,7 +185,7 @@ export class QuizService {
       ]
     },
     { 
-      name: 'Would you kill your dog if he turns into zombie?',
+      name: 'Would you kill your dog if it turns into a zombie?',
       selectedAnswer: null,
       choices: [
         {
