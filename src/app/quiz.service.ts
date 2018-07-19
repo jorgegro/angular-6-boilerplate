@@ -7,7 +7,7 @@ import swal from 'sweetalert2';
 })
 export class QuizService {
 
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
   
   goBackQuestion(){
      if(this.currentQuestion > 1){
