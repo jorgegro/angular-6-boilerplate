@@ -1,17 +1,19 @@
-  <div class="container-fluid background">
-    <div class="row pt-5">
-      <div class="col">
-        <h1 class="fontquestion text-center">Questions {{this.quiz.currentQuestion}}: {{this.quiz.question[this.quiz.currentQuestion - 1].name}} </h1>
-   
-        <div class="answers">
-          <div class="mt-4" *ngFor="let answer of this.quiz.question[this.quiz.currentQuestion - 1].choices">
-            <input type="radio" [value]="answer.value" [(ngModel)]="this.quiz.question[this.quiz.currentQuestion - 1].selectedAnswer">
-            <span class="pl-5">{{answer.answer}}</span>
-          </div>
+<div class="container-fluid background">
+  <div class="row pt-5">
+    <div class="col col-lg-2">
+      <a class="btn backbutton animated shake" (click)="this.quiz.goBackQuestion()"></a>
+    </div>
+    <div class="col">
+      <h1 class="fontquestion text-center px-5">{{this.quiz.question[this.quiz.currentQuestion - 1].name}} </h1>
+      <div class="answers">
+        <div class="mt-4" *ngFor="let answer of this.quiz.question[this.quiz.currentQuestion - 1].choices">
+          <input type="radio" [value]="answer.value" [(ngModel)]="this.quiz.question[this.quiz.currentQuestion - 1].selectedAnswer">
+          <span class="pl-5">{{answer.answer}}</span>
         </div>
-        <a class="btn backbutton" (click)="this.quiz.goBackQuestion()"></a>
-        <a class="btn nextbutton" (click)="this.quiz.goNextQuestion()"></a>
-       
       </div>
     </div>
-   </div>
+    <div class="col col-lg-2">
+      <a class="btn nextbutton animated shake" (click)="this.quiz.goNextQuestion()"></a>
+    </div>
+  </div>
+</div>

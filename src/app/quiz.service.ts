@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router} from '@angular/router';
-
+import swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +20,19 @@ export class QuizService {
   
   goNextQuestion(){
     if(this.question.length > this.currentQuestion){
+      if(this.question[this.currentQuestion - 1].selectedAnswer == null){
+        return swal({
+          type: 'info',
+          title: "Answer the Question!",
+          animation: false,
+          customClass: 'animated wobble',
+          confirmButtonColor: "#62666b",
+          confirmButtonText: ". . ."
+        });
+      }else {
       this.currentQuestion++;
       this.router.navigate([`/question/${this.currentQuestion}`]);
+      }
     } else { 
       this.calculateResult();
       this.router.navigate([`/result`]);
@@ -47,7 +58,7 @@ export class QuizService {
 
   question = [
     {
-      name: "What type of zombies are going to be in your apocalypse?",
+      name: "What type of zombies are going to be in your apocalypse?(type of zombies)",
       selectedAnswer: null,
       choices: [
         {
@@ -99,15 +110,15 @@ export class QuizService {
           value: 3
         },
         {
-          answer: 'flyswatter',
+          answer: 'Flyswatter',
           value: 6
         },
         {
-          answer: 'Pistol with 2 cartidges',
+          answer: 'Handgun',
           value: 9
         },
         {
-          answer: 'baseball bat',
+          answer: 'Baseball bat',
           value: 12.5
         }
       ]
@@ -121,13 +132,13 @@ export class QuizService {
           value: 12.5
         },
         {
-          answer: 'yes',
+          answer: 'Yes',
           value: 6.25
         }
       ]
     },
     {
-      name: 'Where would you make your homebase',
+      name: 'Where would you make your homebase?',
       selectedAnswer: null,
       choices: [
         {
@@ -154,7 +165,7 @@ export class QuizService {
       choices: [
         {
           answer: 'Horse',
-          value: 12.5
+          value: 3
         },
         {
           answer: 'Hoverboard',
@@ -162,11 +173,11 @@ export class QuizService {
         },
         {
           answer: 'Motocycle',
-          value: 3
+          value: 9
         },
         {
-          answer: 'Kombi',
-          value: 9
+          answer: 'Kombi(hippie van)',
+          value: 12.5
         }
       ]
     },

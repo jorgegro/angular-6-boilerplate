@@ -1,44 +1,48 @@
 .backbutton {
-    position: absolute;
-    top: 450px;
-    right:1080px;
-    background-image: url(/assets/leftZombieArm.png);
-    background-size: cover;
-    width: 300px;
-    height: 100px;
-    background-color: none;
- }
- 
- .nextbutton {
-    position: absolute;
-    top: 450px;
-    left: 1080px;
-    background-image: url(/assets/rightZombieArm.png);
-    background-size: cover;
-    width: 300px;
-    height: 100px;
-    border: none;
- }
- 
- .fontquestion {
-    font-family: 'Gaegu', cursive;
-    color:  whitesmoke;
-    font-size: 50px;
-    padding-top: 30px;
-    padding-bottom: 15px;
- }
- 
- .answers {
-    position: absolute;
-    left: 560px;
-    padding-top: 30px;
-    color: white;
-    font-family: 'Special Elite', cursive;
-    font-size: 1.4em;
- }
- 
- .background {
-    background-image: url(/assets/zombieGrayBg-f.jpeg);
-    background-size: cover;
-    height: 100vh;
- }
+  position: absolute;
+  top: 450px;
+  right: -10vh;
+  background-image: url(/assets/leftZombieArm.png);
+  background-size: cover;
+  width: 300px;
+  height: 100px;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.nextbutton {
+  position: absolute;
+  top: 450px;
+  left: -10vh;
+  background-image: url(/assets/rightZombieArm.png);
+  background-size: cover;
+  width: 300px;
+  height: 100px;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.fontquestion {
+  font-family: 'Gaegu', cursive;
+  color: whitesmoke;
+  font-size: 50px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.answers {
+  position: absolute;
+  left: 35vh;
+  padding-top: 30px;
+  color: white;
+  font-family: 'Special Elite', cursive;
+  font-size: 1.4em;
+}
+
+.background {
+  background-image: url(/assets/zombieGrayBg-f.jpeg);
+  background-size: cover;
+  height: 100vh;
+}
