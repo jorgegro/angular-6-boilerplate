@@ -132,7 +132,7 @@ export class QuizService {
           value: 12.5
         },
         {
-          answer: 'Yes',
+          answer: 'Yes, help them ',
           value: 6.25
         }
       ]
@@ -164,20 +164,20 @@ export class QuizService {
       selectedAnswer: null,
       choices: [
         {
-          answer: 'Horse',
-          value: 3
-        },
-        {
           answer: 'Hoverboard',
           value: 6
         },
         {
-          answer: 'Motocycle',
-          value: 9
+          answer: 'Horse',
+          value: 3
         },
         {
           answer: 'Kombi(hippie van)',
           value: 12.5
+        },
+        {
+          answer: 'Motocycle',
+          value: 9
         }
       ]
     },
@@ -186,12 +186,12 @@ export class QuizService {
       selectedAnswer: null,
       choices: [
         {
-          answer: 'Yes, I need to survive no matter what!',
-          value: 12.5
+          answer: "No, I don't want to suffer",
+          value: 9
         },
         {
-          answer: "No, I don't want to suffer",
-          value: 6.25
+          answer: 'Yes, I need to survive no matter what!',
+          value: 12.5
         }
       ]
     },
@@ -205,7 +205,7 @@ export class QuizService {
         },
         {
           answer: "I can't do that to my loving dog",
-          value: 6.25
+          value: 9
         }
       ]
     }
